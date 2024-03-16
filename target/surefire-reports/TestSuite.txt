@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 28.18 s <<< FAILURE! -- in TestSuite
+runner.testRunner.runScenario["searching product in google", "searching product"](3) -- Time elapsed: 6.461 s <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at steps.searchProducts.i_can_see_the_search_result_successfully(searchProducts.java:45)
+	at ✽.i can see the search result successfully(file:///Users/Sami/eclipse-workspace/com.goggle.searchProducts/Features/searchProducts.feature:11)
+
