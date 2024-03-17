@@ -3,6 +3,7 @@ common/googleBase.class
 runner/testRunner.class
 AdvanceSelinium/Hovers.class
 steps/smoke.class
+runner/testRunnerTwo.class
 AdvanceSelinium/DragAndDrop.class
 pages/googleHomePage.class
 AdvanceSelinium/DropDown.class

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,17 @@
                     <div class="method-list-content failed suite-Suite1">
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;visiting third place&quot;, &quot;Visiting third place&quot;)">runScenario("visiting third place", "Visiting third place")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">runScenario("searching product in google", "searching product")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;visiting 2nd  place&quot;, &quot;Visiting 2nd place&quot;)">runScenario("visiting 2nd  place", "Visiting 2nd place")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite1 -->
@@ -121,12 +131,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">runScenario("searching product in google", "searching product")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;visiting the place&quot;, &quot;Visiting the place&quot;)">runScenario("visiting the place", "Visiting the place")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;visiting the place&quot;, &quot;Visiting the place&quot;)">runScenario("visiting the place", "Visiting the place")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="runner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">runScenario("searching product in google", "searching product")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -149,14 +159,90 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;visiting third place&quot;, &quot;Visiting third place&quot;)">
+                  </a> <!-- runScenario("visiting third place", "Visiting third place") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("visiting third place", "Visiting third place")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;I am on the Ebay Home Page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;I am on the Ebay Home Page&quot;)
+public void i_am_on_the_ebay_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">
                   </a> <!-- runScenario("searching product in google", "searching product") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("searching product in google", "searching product")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at steps.searchProducts.i_can_see_the_search_result_successfully(searchProducts.java:45)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;sadias-MBP.lan&apos;, ip: &apos;2603:7000:e200:3db1:0:0:0:1491%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6.1&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: /var/folders/kd/rzyxnj3d4rz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50242}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f964de07780118c1d3118de67f3955f7
+*** Element info: {Using=id, value=result-stats}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at steps.searchProducts.i_can_see_the_search_result_successfully(searchProducts.java:41)
 	at ✽.i can see the search result successfully(file:///Users/Sami/eclipse-workspace/com.goggle.searchProducts/Features/searchProducts.feature:11)
-... Removed 4 stack frames
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;visiting 2nd  place&quot;, &quot;Visiting 2nd place&quot;)">
+                  </a> <!-- runScenario("visiting 2nd  place", "Visiting 2nd place") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("visiting 2nd  place", "Visiting 2nd place")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;I am on the Walmart Home Page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;I am on the Walmart Home Page&quot;)
+public void i_am_on_the_walmart_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -182,20 +268,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">
-                  </a> <!-- runScenario("searching product in google", "searching product") -->
+                  <a name="runScenario(&quot;visiting the place&quot;, &quot;Visiting the place&quot;)">
+                  </a> <!-- runScenario("visiting the place", "Visiting the place") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("searching product in google", "searching product")</span>
+                  <span class="parameters">("visiting the place", "Visiting the place")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;visiting the place&quot;, &quot;Visiting the place&quot;)">
-                  </a> <!-- runScenario("visiting the place", "Visiting the place") -->
+                  <a name="runScenario(&quot;searching product in google&quot;, &quot;searching product&quot;)">
+                  </a> <!-- runScenario("searching product in google", "searching product") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("visiting the place", "Visiting the place")</span>
+                  <span class="parameters">("searching product in google", "searching product")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -262,28 +348,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.testRunner')
-data.setCell(0, 3, 14620);
+data.setCell(0, 3, 7991);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.testRunner')
-data.setCell(1, 3, 6458);
+data.setCell(1, 3, 4547);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'runner.testRunner')
-data.setCell(2, 3, 5334);
+data.setCell(2, 3, 3542);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'runner.testRunner')
-data.setCell(3, 3, 3);
+data.setCell(3, 3, 2340);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runner.testRunner')
+data.setCell(4, 3, 96);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runner.testRunner')
+data.setCell(5, 3, 6);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -311,30 +405,42 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.testRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@40e32762)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@596a7f44)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("searching product in google", "searching product")</span>
-                <span class="method-start">516 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("visiting third place", "Visiting third place")</span>
+                <span class="method-start">252 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("visiting 2nd  place", "Visiting 2nd place")</span>
+                <span class="method-start">351 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("searching product in google", "searching product")</span>
-                <span class="method-start">15137 ms</span>
+                <span class="method-start">358 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("searching product in google", "searching product")</span>
+                <span class="method-start">8350 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("searching product in google", "searching product")</span>
-                <span class="method-start">20472 ms</span>
+                <span class="method-start">12898 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("visiting the place", "Visiting the place")</span>
-                <span class="method-start">26933 ms</span>
+                <span class="method-start">16441 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">26936 ms</span>
+                <span class="method-start">18781 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
